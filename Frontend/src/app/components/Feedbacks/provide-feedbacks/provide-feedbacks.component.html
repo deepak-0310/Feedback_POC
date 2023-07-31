@@ -1,0 +1,22 @@
+<form   #form="ngForm" (ngSubmit)="addFeedback()">
+    <div class="shadow-lg flex flex-col justify-evenly " id="feedbackForm">
+        <div class="px-4 border-b py-2 m-2">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Feedback Form</h2>
+        </div>
+        <div>
+            <label for="name" class="m-1">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="addFeedbackRequest.UserName" #name="ngModel"
+                class="m-2" placeholder="Enter your name" required>
+                
+        </div>
+        <div>
+            <label for="feedback" class="m-1">Feedback:</label>
+            <textarea id="feedback" name="feedback" #feedback="ngModel" [(ngModel)]="addFeedbackRequest.UserFeedback"
+                class="m-2" placeholder="Enter your feedback" required></textarea>
+        </div>
+        <div class="flex justify-center">
+            <button id="submitBtn">Submit</button>
+
+        </div>
+    </div>
+</form>

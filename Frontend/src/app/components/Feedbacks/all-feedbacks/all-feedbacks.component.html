@@ -1,0 +1,35 @@
+<div class="shadow-lg flex justify-center">
+  <table class="shadow-lg bg-white border-separate mx-10">
+    <thead>
+      <tr>
+        <th class="bg-blue-100 border text-left px-8 py-4">ID</th>
+        <th class="bg-blue-100 border text-left px-8 py-4">Name</th>
+        <th class="bg-blue-100 border text-left px-8 py-4">Feedback</th>
+        <th class="bg-blue-100 border text-left px-8 py-4">Date </th>
+        <th class="bg-blue-100 border text-left px-8 py-4">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of feedbackData">
+        <td class="border px-8 py-4">{{ data.id }}</td>
+        <td class="border px-8 py-4">{{ data.name }}</td>
+        <td class="border px-8 py-4">{{ data.feedback }}</td>
+        <td class="border px-8 py-4">{{data.date_Time.slice(0,10)}}</td>
+        <td class="border px-8 py-4">{{data.date_Time.slice(11)}}</td>
+        <div class="inline-flex rounded-md shadow-sm mt-2" role="group">
+          <button type="button"
+            style="width: 80px;" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-blue-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            Edit
+          </button>
+          <button type="button"
+          style="width: 80px;" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-red-300 hover:text-red-900 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            Delete
+          </button>
+        </div>
+
+        <!-- <td><svg class="w-5 h-5 mr-18" onclick="delete(data.id)"fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
