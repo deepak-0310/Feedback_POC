@@ -1,3 +1,6 @@
+using UserFeedback.Interfaces;
+using UserFeedback.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
@@ -6,8 +9,6 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          //policy.WithOrigins("http://localhost:3333/api/Feedback",
-                          //                "http://www.contoso.com"); // add the allowed origins
                           policy.AllowAnyOrigin();
                           policy.AllowAnyHeader();
                           policy.AllowAnyMethod();
@@ -19,6 +20,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddScoped<IAddFeedbackService,AddFeedbackService>();
+builder.Services.AddScoped<IGetFeedbackService,GetFeedbackService>();
+builder.Services.AddScoped<IDeleteFeedbackService,DeleteFeedbackService>();
 
 var app = builder.Build();
 
