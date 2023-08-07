@@ -12,34 +12,48 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./provide-feedbacks.component.css']
 })
 export class ProvideFeedbacksComponent implements OnInit {
-  name = 'Angular';
-  
-   form = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    //email: new FormControl('', [Validators.required, Validators.email])
-  });
-  addFeedbackRequest: UserFeedback = {
-    UserName: '',
-    UserFeedback: ''
-  };
-  constructor(private feedbackservice: FeedbacksService, private router: Router) {
+  feedbackForm!: FormGroup;
+  constructor(private feedbackservice: FeedbacksService,private fb: FormBuilder) {
 
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.feedbackForm=this.fb.group({
+      username:['',Validators.required],
+      userfeedback:['',Validators.required]
+    })
 
   }
-  addFeedback() {
-    this.feedbackservice.addFeedback(this.addFeedbackRequest).subscribe({
+  onSubmit(){
+    if(this.feedbackForm.valid){
+      this.addFeedbacks();
+    }
+    else{
+      this.validateFormFields(this.feedbackForm);
+      alert("The form is invalid");
+    }
+  }
+  private validateFormFields(formGroup:FormGroup){
+    Object.keys(formGroup.controls).forEach(field =>{
+      const control = formGroup.get(field);
+      if(control instanceof FormControl){
+        control.markAsDirty({onlySelf:true})
+      }
+      else if(control instanceof FormGroup){
+        this.validateFormFields(control);
+      }
+    })
+
+  }
+  // addFeedbackRequest:any = this.feedbackForm.value;
+  addFeedbacks() {
+    console.log(this.feedbackForm.value);
+    this.feedbackservice.addFeedback(this.feedbackForm.value).subscribe({
       next: (data) => {
-        this.resetForm();
+        this.feedbackForm.reset();
       }
     });
   }
   resetForm() {
-    this.addFeedbackRequest = {
-      UserName: '',
-      UserFeedback: ''
-    };
+    this.feedbackForm.reset();
   }
 }

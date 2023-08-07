@@ -1,30 +1,30 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import {map} from 'rxjs/operators';
+import { FeedbacksService } from 'src/app/services/feedbacks.service';
+import { UserFeedback } from 'src/models/Feedback';
 
 @Component({
   selector: 'app-all-feedbacks',
   templateUrl: './all-feedbacks.component.html',
   styleUrls: ['./all-feedbacks.component.css']
 })
+
+
 export class AllFeedbacksComponent implements OnInit {
-  feedbackData: any[] = [];
-  cnt:number=0;
-  Date_Time:any[][]=[];
-  APIUrl:string= "http://localhost:3333/api/Feedback";
-  constructor(private http:HttpClient){
+  dataSubscription?:Subscription;
+  data:any;
+  constructor(private getService:FeedbacksService){
 
   }
   ngOnInit(): void {
-    this.getFeedbackData();
-  }
-  getFeedbackData(){
-    this.http.get<any[]>(this.APIUrl).subscribe(
-      (data)=>{
-        this.feedbackData=data;
+    this.dataSubscription=this.getService.getFeedback().subscribe(
+      (response:any)=>{
+        this.data=response;
       }
-      );
+      
+    );
   }
-  delete(id:number){
-     this.http.delete<any[]>(this.APIUrl+'/DeleteFeedback');
-  }
+  
 }

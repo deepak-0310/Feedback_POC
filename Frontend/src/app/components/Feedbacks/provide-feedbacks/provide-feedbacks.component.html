@@ -1,21 +1,21 @@
-<form   #form="ngForm" (ngSubmit)="addFeedback()">
+<form   #form="ngForm" [formGroup]="feedbackForm">
     <div class="shadow-lg flex flex-col justify-evenly " id="feedbackForm">
         <div class="px-4 border-b py-2 m-2">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Feedback Form</h2>
         </div>
         <div>
             <label for="name" class="m-1">Name:</label>
-            <input type="text" id="name" name="name" [(ngModel)]="addFeedbackRequest.UserName" #name="ngModel"
-                class="m-2" placeholder="Enter your name" required>
+            <input formControlName="username" type="text" id="name" class="m-2" placeholder="Enter your name" >
                 
         </div>
+        <small *ngIf="feedbackForm.controls['username'].dirty && feedbackForm.hasError('required','username')" class="mb-8 text-red-700"> *UserName is required</small>
         <div>
             <label for="feedback" class="m-1">Feedback:</label>
-            <textarea id="feedback" name="feedback" #feedback="ngModel" [(ngModel)]="addFeedbackRequest.UserFeedback"
-                class="m-2" placeholder="Enter your feedback" required></textarea>
+            <textarea formControlName="userfeedback" id="feedback" class="m-2" placeholder="Enter your feedback" ></textarea>
         </div>
+        <small *ngIf="feedbackForm.controls['userfeedback'].dirty && feedbackForm.hasError('required','userfeedback')" class="mb-8 text-red-700"> *UserFeedback is required</small>
         <div class="flex justify-center">
-            <button id="submitBtn">Submit</button>
+            <button (click)="onSubmit()" id="submitBtn">Submit</button>
 
         </div>
     </div>

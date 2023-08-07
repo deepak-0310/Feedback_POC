@@ -1,0 +1,15 @@
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\bin\Debug\net6.0\FeedbackProvider.deps.json
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\bin\Debug\net6.0\FeedbackProvider.dll
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\bin\Debug\net6.0\FeedbackProvider.pdb
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\bin\Debug\net6.0\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\bin\Debug\net6.0\FeedbackDemo.Core.pdb
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.csproj.AssemblyReference.cache
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.AssemblyInfoInputs.cache
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.AssemblyInfo.cs
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.csproj.CoreCompileInputs.cache
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.csproj.CopyComplete
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.dll
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\refint\FeedbackProvider.dll
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\FeedbackProvider.pdb
+C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackProvider\obj\Debug\net6.0\ref\FeedbackProvider.dll
