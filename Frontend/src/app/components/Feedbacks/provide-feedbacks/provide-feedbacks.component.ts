@@ -53,7 +53,5 @@ export class ProvideFeedbacksComponent implements OnInit {
       }
     });
   }
-  resetForm() {
-    this.feedbackForm.reset();
-  }
+  
 }

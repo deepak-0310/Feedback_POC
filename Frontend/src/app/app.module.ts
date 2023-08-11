@@ -7,12 +7,20 @@ import { ProvideFeedbacksComponent } from './components/Feedbacks/provide-feedba
 import { AllFeedbacksComponent } from './components/Feedbacks/all-feedbacks/all-feedbacks.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginpageComponent } from './components/Login-page/loginpage/loginpage.component';
+import { NavbarComponent } from './components/Feedbacks/Navbar/navbar/navbar.component';
+import { SignupComponent } from './components/signup/signup.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProvideFeedbacksComponent,
-    AllFeedbacksComponent
+    AllFeedbacksComponent,
+    LoginpageComponent,
+    NavbarComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

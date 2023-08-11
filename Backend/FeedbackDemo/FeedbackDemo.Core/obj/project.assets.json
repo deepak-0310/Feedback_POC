@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj",
+      "projectUniqueName": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj",
       "projectName": "FeedbackDemo.Core",
-      "projectPath": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj",
+      "projectPath": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj",
       "packagesPath": "C:\\Users\\INMREDD1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackDemo.Core\\obj\\",
+      "outputPath": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackDemo.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\INMREDD1\\AppData\\Roaming\\NuGet\\NuGet.Config",

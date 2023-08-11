@@ -10,3 +10,15 @@ C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\F
 C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\refint\FeedbackDemo.Core.dll
 C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.pdb
 C:\Users\INMREDD1\source\repos\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\ref\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\bin\Debug\net6.0\FeedbackDemo.Core.deps.json
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\bin\Debug\net6.0\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\bin\Debug\net6.0\FeedbackDemo.Core.pdb
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.csproj.AssemblyReference.cache
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.AssemblyInfoInputs.cache
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.AssemblyInfo.cs
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.csproj.CoreCompileInputs.cache
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\refint\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\FeedbackDemo.Core.pdb
+C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo.Core\obj\Debug\net6.0\ref\FeedbackDemo.Core.dll

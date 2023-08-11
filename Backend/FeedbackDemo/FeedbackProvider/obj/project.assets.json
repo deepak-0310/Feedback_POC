@@ -6797,11 +6797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackProvider\\FeedbackProvider.csproj",
+      "projectUniqueName": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackProvider\\FeedbackProvider.csproj",
       "projectName": "FeedbackProvider",
-      "projectPath": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackProvider\\FeedbackProvider.csproj",
+      "projectPath": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackProvider\\FeedbackProvider.csproj",
       "packagesPath": "C:\\Users\\INMREDD1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackProvider\\obj\\",
+      "outputPath": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackProvider\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\INMREDD1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6818,8 +6818,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj": {
-              "projectPath": "C:\\Users\\INMREDD1\\source\\repos\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj"
+            "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj": {
+              "projectPath": "C:\\Users\\INMREDD1\\Desktop\\Feedback_Poc\\Backend\\FeedbackDemo\\FeedbackDemo.Core\\FeedbackDemo.Core.csproj"
             }
           }
         }

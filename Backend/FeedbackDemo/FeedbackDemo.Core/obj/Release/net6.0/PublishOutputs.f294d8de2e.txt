@@ -1,0 +1,3 @@
+C:\Users\INMREDD1\Desktop\Deployement_Backend\FeedbackDemo.Core.dll
+C:\Users\INMREDD1\Desktop\Deployement_Backend\FeedbackDemo.Core.deps.json
+C:\Users\INMREDD1\Desktop\Deployement_Backend\FeedbackDemo.Core.pdb

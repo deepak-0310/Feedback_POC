@@ -16,6 +16,7 @@ namespace FeedbackProvider.Context
 
         }
         public DbSet<FeedbackDetails> UserFeedbacks{ get; set; }
+        public DbSet<SignupDetails> SignupDetails { get; set; }
         
     }
 }

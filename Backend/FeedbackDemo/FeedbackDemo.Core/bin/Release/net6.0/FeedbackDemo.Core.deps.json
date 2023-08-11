@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FeedbackDemo.Core/1.0.0": {
+        "runtime": {
+          "FeedbackDemo.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FeedbackDemo.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

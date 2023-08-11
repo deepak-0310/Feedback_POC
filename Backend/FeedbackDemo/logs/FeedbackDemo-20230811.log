@@ -1,0 +1,253 @@
+[2023-08-11 10:46:01  INF]  Now listening on: https://localhost:7016
+[2023-08-11 10:46:01  INF]  Application started. Press Ctrl+C to shut down.
+[2023-08-11 10:46:01  INF]  Hosting environment: Development
+[2023-08-11 10:46:01  INF]  Content root path: C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo\
+[2023-08-11 10:46:01  INF]  Request starting HTTP/2 GET https://localhost:7016/swagger/index.html - -
+[2023-08-11 10:46:02  INF]  Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+[2023-08-11 10:46:02  INF]  Request finished HTTP/2 GET https://localhost:7016/swagger/index.html - - - 200 - text/html;charset=utf-8 507.7828ms
+[2023-08-11 10:46:02  INF]  Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 5.6563ms
+[2023-08-11 10:46:02  INF]  Request starting HTTP/2 GET https://localhost:7016/_vs/browserLink - -
+[2023-08-11 10:46:02  INF]  Request finished HTTP/2 GET https://localhost:7016/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.3943ms
+[2023-08-11 10:46:02  INF]  Request starting HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - -
+[2023-08-11 10:46:02  INF]  Request finished HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 102.4356ms
+[2023-08-11 10:49:21  INF]  Request starting HTTP/2 OPTIONS https://localhost:7016/api/Signup/authenticate - -
+[2023-08-11 10:49:21  INF]  CORS policy execution successful.
+[2023-08-11 10:49:21  INF]  Request finished HTTP/2 OPTIONS https://localhost:7016/api/Signup/authenticate - - - 204 - - 71.1076ms
+[2023-08-11 10:49:21  INF]  Request starting HTTP/2 POST https://localhost:7016/api/Signup/authenticate application/json 51
+[2023-08-11 10:49:21  INF]  CORS policy execution successful.
+[2023-08-11 10:49:21  INF]  Executing endpoint 'FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo)'
+[2023-08-11 10:49:21  INF]  Route matched with {action = "Authenticate", controller = "Signup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(FeedbackDemo.Core.Models.SigninDetails) on controller FeedbackDemo.Controllers.SignupController (FeedbackDemo).
+[2023-08-11 10:49:21  INF]  Signin process initiated
+[2023-08-11 10:49:21  INF]  Sginin service initiated
+[2023-08-11 10:49:22  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:49:23  INF]  Executed DbCommand (92ms) [Parameters=[@__signinDetails_Email_0='?' (Size = 50), @__signinDetails_Password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[id], [s].[Email], [s].[Name], [s].[Password]
+FROM [SignupDetails] AS [s]
+WHERE ([s].[Email] = @__signinDetails_Email_0) AND ([s].[Password] = @__signinDetails_Password_1)
+[2023-08-11 10:49:23  INF]  User is found
+[2023-08-11 10:49:23  INF]  Successfully Logged-in
+[2023-08-11 10:49:23  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2023-08-11 10:49:23  INF]  Executed action FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo) in 2091.0661ms
+[2023-08-11 10:49:23  INF]  Executed endpoint 'FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo)'
+[2023-08-11 10:49:23  INF]  Request finished HTTP/2 POST https://localhost:7016/api/Signup/authenticate application/json 51 - 200 - application/json;+charset=utf-8 2144.2981ms
+[2023-08-11 10:49:46  INF]  Request starting HTTP/2 OPTIONS https://localhost:7016/api/Feedback - -
+[2023-08-11 10:49:46  INF]  CORS policy execution successful.
+[2023-08-11 10:49:46  INF]  Request finished HTTP/2 OPTIONS https://localhost:7016/api/Feedback - - - 204 - - 1.7404ms
+[2023-08-11 10:49:46  INF]  Request starting HTTP/2 POST https://localhost:7016/api/Feedback application/json 48
+[2023-08-11 10:49:46  INF]  CORS policy execution successful.
+[2023-08-11 10:49:46  INF]  Executing endpoint 'FeedbackController.PostFeedback (FeedbackDemo)'
+[2023-08-11 10:49:46  INF]  Route matched with {action = "PostFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostFeedback(FeedbackDemo.Core.Models.FeedbackDetailsUser) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:49:46  INF]  POST Feedback process initiated
+[2023-08-11 10:49:46  INF]  Add Feedback Service initiated
+[2023-08-11 10:49:46  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:49:46  INF]  Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserFeedbacks] ([Date_Time], [UserFeedback], [UserName])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [UserFeedbacks]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2023-08-11 10:49:46  INF]  Feedback added successfully to the Database
+[2023-08-11 10:49:46  INF]  Feedback added successfully
+[2023-08-11 10:49:46  INF]  Executing CreatedAtActionResult, writing value of type 'FeedbackDemo.Core.Models.FeedbackDetailsUser'.
+[2023-08-11 10:49:46  INF]  Executed action FeedbackController.PostFeedback (FeedbackDemo) in 293.0022ms
+[2023-08-11 10:49:46  INF]  Executed endpoint 'FeedbackController.PostFeedback (FeedbackDemo)'
+[2023-08-11 10:49:46  INF]  Request finished HTTP/2 POST https://localhost:7016/api/Feedback application/json 48 - 201 - application/json;+charset=utf-8 300.2905ms
+[2023-08-11 10:49:47  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=1&PageSize=10 - -
+[2023-08-11 10:49:47  INF]  CORS policy execution successful.
+[2023-08-11 10:49:47  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:48  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:49:48  INF]  GET Feedback process initiated
+[2023-08-11 10:49:48  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:49:48  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:49:48  WRN]  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2023-08-11 10:49:48  WRN]  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2023-08-11 10:49:48  INF]  Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:49:48  INF]  Creating the page of required feedbacks
+[2023-08-11 10:49:48  INF]  Feedback was fetched successfully
+[2023-08-11 10:49:48  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:49:48  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 82.8611ms
+[2023-08-11 10:49:48  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:48  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=1&PageSize=10 - - - 200 - application/json;+charset=utf-8 89.2630ms
+[2023-08-11 10:49:54  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=2&PageSize=10 - -
+[2023-08-11 10:49:54  INF]  CORS policy execution successful.
+[2023-08-11 10:49:54  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:54  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:49:54  INF]  GET Feedback process initiated
+[2023-08-11 10:49:54  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:49:54  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:49:54  WRN]  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2023-08-11 10:49:54  WRN]  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2023-08-11 10:49:54  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[2023-08-11 10:49:54  INF]  Creating the page of required feedbacks
+[2023-08-11 10:49:54  INF]  Feedback was fetched successfully
+[2023-08-11 10:49:54  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:49:54  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 6.9859ms
+[2023-08-11 10:49:54  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:54  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=2&PageSize=10 - - - 200 - application/json;+charset=utf-8 7.4725ms
+[2023-08-11 10:49:54  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=3&PageSize=10 - -
+[2023-08-11 10:49:54  INF]  CORS policy execution successful.
+[2023-08-11 10:49:54  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:54  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:49:54  INF]  GET Feedback process initiated
+[2023-08-11 10:49:54  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:49:54  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:49:54  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:49:54  INF]  Creating the page of required feedbacks
+[2023-08-11 10:49:54  INF]  Feedback was fetched successfully
+[2023-08-11 10:49:54  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:49:54  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 7.1439ms
+[2023-08-11 10:49:54  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:49:54  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=3&PageSize=10 - - - 200 - application/json;+charset=utf-8 7.9326ms
+[2023-08-11 10:50:00  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=4&PageSize=10 - -
+[2023-08-11 10:50:00  INF]  CORS policy execution successful.
+[2023-08-11 10:50:00  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:00  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:00  INF]  GET Feedback process initiated
+[2023-08-11 10:50:00  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:00  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:00  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:50:00  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:00  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:00  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:00  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 2.1534ms
+[2023-08-11 10:50:00  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:00  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=4&PageSize=10 - - - 200 - application/json;+charset=utf-8 3.1636ms
+[2023-08-11 10:50:02  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=5&PageSize=10 - -
+[2023-08-11 10:50:02  INF]  CORS policy execution successful.
+[2023-08-11 10:50:02  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:02  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:02  INF]  GET Feedback process initiated
+[2023-08-11 10:50:02  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:02  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:02  INF]  Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:50:02  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:02  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:02  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:02  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 2.0547ms
+[2023-08-11 10:50:02  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:02  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=5&PageSize=10 - - - 200 - application/json;+charset=utf-8 2.5448ms
+[2023-08-11 10:50:03  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=4&PageSize=10 - -
+[2023-08-11 10:50:03  INF]  CORS policy execution successful.
+[2023-08-11 10:50:03  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:03  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:03  INF]  GET Feedback process initiated
+[2023-08-11 10:50:03  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:03  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:03  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:50:03  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:03  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:03  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:03  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 2.1958ms
+[2023-08-11 10:50:03  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:03  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=4&PageSize=10 - - - 200 - application/json;+charset=utf-8 2.5706ms
+[2023-08-11 10:50:03  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=3&PageSize=10 - -
+[2023-08-11 10:50:03  INF]  CORS policy execution successful.
+[2023-08-11 10:50:03  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:03  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:03  INF]  GET Feedback process initiated
+[2023-08-11 10:50:03  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:03  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:03  INF]  Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:50:03  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:03  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:03  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:03  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 5.193ms
+[2023-08-11 10:50:03  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:03  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=3&PageSize=10 - - - 200 - application/json;+charset=utf-8 6.1671ms
+[2023-08-11 10:50:09  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=2&PageSize=10 - -
+[2023-08-11 10:50:09  INF]  CORS policy execution successful.
+[2023-08-11 10:50:09  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:09  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:09  INF]  GET Feedback process initiated
+[2023-08-11 10:50:09  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:09  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:09  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[2023-08-11 10:50:09  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:09  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:09  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:09  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 6.0927ms
+[2023-08-11 10:50:09  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:09  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=2&PageSize=10 - - - 200 - application/json;+charset=utf-8 7.2435ms
+[2023-08-11 10:50:12  INF]  Request starting HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=1&PageSize=10 - -
+[2023-08-11 10:50:12  INF]  CORS policy execution successful.
+[2023-08-11 10:50:12  INF]  Executing endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:12  INF]  Route matched with {action = "GetFeedback", controller = "Feedback"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFeedback(FeedbackDemo.Core.Models.PageParameters) on controller FeedbackController (FeedbackDemo).
+[2023-08-11 10:50:12  INF]  GET Feedback process initiated
+[2023-08-11 10:50:12  INF]  Get Paged feedbacks service initiated
+[2023-08-11 10:50:12  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 10:50:12  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Date_Time], [u].[UserFeedback], [u].[UserName]
+FROM [UserFeedbacks] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2023-08-11 10:50:12  INF]  Creating the page of required feedbacks
+[2023-08-11 10:50:12  INF]  Feedback was fetched successfully
+[2023-08-11 10:50:12  INF]  Executing OkObjectResult, writing value of type 'FeedbackDemo.Core.Pagination`1[[FeedbackDemo.Core.Models.FeedbackDetails, FeedbackDemo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2023-08-11 10:50:12  INF]  Executed action FeedbackController.GetFeedback (FeedbackDemo) in 3.5699ms
+[2023-08-11 10:50:12  INF]  Executed endpoint 'FeedbackController.GetFeedback (FeedbackDemo)'
+[2023-08-11 10:50:12  INF]  Request finished HTTP/2 GET https://localhost:7016/api/Feedback?PageNumber=1&PageSize=10 - - - 200 - application/json;+charset=utf-8 4.0509ms
+[2023-08-11 11:04:21  INF]  Now listening on: https://localhost:7016
+[2023-08-11 11:04:21  INF]  Application started. Press Ctrl+C to shut down.
+[2023-08-11 11:04:21  INF]  Hosting environment: Development
+[2023-08-11 11:04:21  INF]  Content root path: C:\Users\INMREDD1\Desktop\Feedback_Poc\Backend\FeedbackDemo\FeedbackDemo\
+[2023-08-11 11:04:22  INF]  Request starting HTTP/2 GET https://localhost:7016/swagger/index.html - -
+[2023-08-11 11:04:22  INF]  Request starting HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - -
+[2023-08-11 11:04:22  INF]  Request finished HTTP/2 GET https://localhost:7016/swagger/index.html - - - 200 - text/html;charset=utf-8 423.8751ms
+[2023-08-11 11:04:22  INF]  Request finished HTTP/2 GET https://localhost:7016/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 11.0500ms
+[2023-08-11 11:04:22  INF]  Request starting HTTP/2 GET https://localhost:7016/_vs/browserLink - -
+[2023-08-11 11:04:23  INF]  Request finished HTTP/2 GET https://localhost:7016/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.3655ms
+[2023-08-11 11:04:23  INF]  Request starting HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - -
+[2023-08-11 11:04:23  INF]  Request finished HTTP/2 GET https://localhost:7016/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.1667ms
+[2023-08-11 11:04:42  INF]  Request starting HTTP/2 OPTIONS https://localhost:7016/api/Signup/authenticate - -
+[2023-08-11 11:04:42  INF]  CORS policy execution successful.
+[2023-08-11 11:04:42  INF]  Request finished HTTP/2 OPTIONS https://localhost:7016/api/Signup/authenticate - - - 204 - - 7.9255ms
+[2023-08-11 11:04:42  INF]  Request starting HTTP/2 POST https://localhost:7016/api/Signup/authenticate application/json 51
+[2023-08-11 11:04:42  INF]  CORS policy execution successful.
+[2023-08-11 11:04:42  INF]  Executing endpoint 'FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo)'
+[2023-08-11 11:04:42  INF]  Route matched with {action = "Authenticate", controller = "Signup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authenticate(FeedbackDemo.Core.Models.SigninDetails) on controller FeedbackDemo.Controllers.SignupController (FeedbackDemo).
+[2023-08-11 11:04:43  INF]  Signin process initiated
+[2023-08-11 11:04:43  INF]  Sginin service initiated
+[2023-08-11 11:04:43  INF]  Entity Framework Core 6.0.20 initialized 'FeedbackDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: MigrationsAssembly=FeedbackDemo 
+[2023-08-11 11:04:44  INF]  Executed DbCommand (91ms) [Parameters=[@__signinDetails_Email_0='?' (Size = 50), @__signinDetails_Password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[id], [s].[Email], [s].[Name], [s].[Password]
+FROM [SignupDetails] AS [s]
+WHERE ([s].[Email] = @__signinDetails_Email_0) AND ([s].[Password] = @__signinDetails_Password_1)
+[2023-08-11 11:04:44  INF]  User is found
+[2023-08-11 11:04:44  INF]  Successfully Logged-in
+[2023-08-11 11:04:44  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2023-08-11 11:04:44  INF]  Executed action FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo) in 2008.8594ms
+[2023-08-11 11:04:44  INF]  Executed endpoint 'FeedbackDemo.Controllers.SignupController.Authenticate (FeedbackDemo)'
+[2023-08-11 11:04:44  INF]  Request finished HTTP/2 POST https://localhost:7016/api/Signup/authenticate application/json 51 - 200 - application/json;+charset=utf-8 2058.9917ms

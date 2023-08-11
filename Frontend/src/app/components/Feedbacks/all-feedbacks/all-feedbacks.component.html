@@ -1,35 +1,29 @@
-<div class="shadow-lg flex justify-center">
-  <table class="shadow-lg bg-white border-separate mx-10">
+<app-navbar></app-navbar>
+<div class="flex justify-center">
+  <table class="shadow-lg bg-white border-separate mx-10 my-2">
     <thead>
       <tr>
-        <th class="bg-blue-100 border text-left px-8 py-4">ID</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Name</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Feedback</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Date </th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Time</th>
+        <th class="bg-blue-100 border text-left px-8 py-2">ID</th>
+        <th class="bg-blue-100 border text-left px-8 py-2">Name</th>
+        <th class="bg-blue-100 border text-left px-8 py-2">Feedback</th>
+        <th class="bg-blue-100 border text-left px-8 py-2">Date </th>
+        <th class="bg-blue-100 border text-left px-8 py-2">Time</th>
       </tr>
     </thead>
     <tbody>
 
       <tr *ngFor="let item of data">
-        <td class="border px-8 py-4">{{ item.id }}</td>
-        <td class="border px-8 py-4">{{ item.userName }}</td>
-        <td class="border px-8 py-4">{{ item.userFeedback }}</td>
-        <td class="border px-8 py-4">{{item.date_Time.slice(0,10)}}</td>
-        <td class="border px-8 py-4">{{item.date_Time.slice(11)}}</td>
-        <!-- <div class="inline-flex rounded-md shadow-sm mt-2" role="group">
-          <button type="button"
-            style="width: 80px;" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-blue-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-            Edit
-          </button>
-          <button type="button"
-          style="width: 80px;" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-red-300 hover:text-red-900 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-            Delete
-          </button>
-        </div> -->
-
-        <!-- <td><svg class="w-5 h-5 mr-18" onclick="delete(data.id)"fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></td> -->
+        <td class="border px-8 py-2">{{ item.id }}</td>
+        <td class="border px-8 py-2">{{ item.userName }}</td>
+        <td class="border px-8 py-2">{{ item.userFeedback }}</td>
+        <td class="border px-8 py-2">{{item.date_Time.slice(0,10)}}</td>
+        <td class="border px-8 py-2">{{item.date_Time.slice(11,19)}}</td>
+        
       </tr>
     </tbody>
   </table>
+</div>
+<div class="flex justify-around mx-12 mt-2">
+  <button (click)="onPrevious()" type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Previous</button>
+  <button (click)="onNext()" type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Next</button>
 </div>
